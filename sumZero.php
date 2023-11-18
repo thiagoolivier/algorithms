@@ -1,31 +1,34 @@
 <?php
-
-function sumZero(array $data)
+/**
+ * Verifies the the provided dataset to identify the initial pair of numbers whose summation equals zero.
+ * The provided dataset must me previously sorted for this context.
+ * @param array $dataset The array to be verified.
+ * @return mixed The fisrt pair of values whose summation equals to zero or null.
+ */
+function sumZero(array $dataset): array|null
 {
-    if (!isset($data)) {
-        return false;
+    if (!isset($dataset)) {
+        echo "Empty or undefined dataset\n";
+        return null;
     }
 
     $left = 0;
-    $right = count($data) - 1;
+    $right = count($dataset) - 1;
 
     while ($left < $right) {
-        $result = $data[$left] + $data[$right];
+        $result = $dataset[$left] + $dataset[$right];
 
-        if ( $result === 0) {
-            return [$data[$left], $data[$right]];
-        } 
-        else if ($result > 0) {
+        if ($result === 0) {
+            return [$dataset[$left], $dataset[$right]];
+        } else if ($result > 0) {
             $right--;
         } else {
             $left++;
         }
     }
-    
+
     return null;
 }
 
-$result = sumZero([-5, -4, -2, 0, 6, 8, 9, 10]);
-var_dump($result);
-
+sumZero([-5, -4, -2, 0, 6, 8, 9, 10]);
 ?>

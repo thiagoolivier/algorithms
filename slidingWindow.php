@@ -4,13 +4,13 @@
  * 
  * @param array $dataset Numbers to be added together.
  * @param int $window Size of the window to be added together.
+ * @return mixed The maximum sum found between the values given.
  */
-
-function maxSubArraySum(array $dataset, int $window)
+function maxSubArraySum(array $dataset, int $window): int
 {
     if (!isset($dataset) || $window < 1) {
-        echo("Array vazio ou janela menor que 1.\n");
-        return null;
+        echo "Empty array or less than 1 window size provided.\n";
+        return false;
     }
 
     $maxSum = 0;
@@ -30,6 +30,5 @@ function maxSubArraySum(array $dataset, int $window)
     return $maxSum;
 }
 
-$result = maxSubArraySum([2,3,5,1,10,6,7,10], 4);
-var_dump($result);
+maxSubArraySum([2, 3, 5, 1, 10, 6, 7, 10], 4);
 ?>
