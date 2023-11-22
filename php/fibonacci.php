@@ -1,5 +1,4 @@
 <?php
-
 function recursiveFibonacci($target) {
     if($target <= 2) return 1;
     return recursiveFibonacci($target - 1) + recursiveFibonacci($target - 2);
@@ -16,5 +15,4 @@ function iterativeFibonacci($target) {
 
     return $fib[$target];
 }
-
 ?>
