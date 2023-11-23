@@ -5,7 +5,7 @@ function someRecursive(inputArr, callback) {
 }
 
 // Example with callback.
-someRecursive([2,2,2,4,5], (num) => {
-    let result = num % 2 === 0 ? true : false;
-    return result;
+someRecursive([2, 2, 2, 4, 5], (num) => {
+  let result = num % 2 === 0 ? true : false;
+  return result;
 });
