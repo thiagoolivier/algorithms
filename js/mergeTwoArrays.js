@@ -1,5 +1,5 @@
 // Merges two sorted arrays.
-function merge(arr1, arr2) {
+export function mergeTwoArrays(arr1, arr2) {
   let result = [];
   let i = 0;
   let j = 0;
