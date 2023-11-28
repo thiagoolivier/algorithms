@@ -1,8 +1,7 @@
 // Merges two sorted arrays.
 export function mergeTwoArrays(arr1, arr2) {
   let result = [];
-  let i = 0;
-  let j = 0;
+  let i = 0, j = 0;
 
   while (i < arr1.length && j < arr2.length) {
     if (arr1[i] < arr2[j]) {
