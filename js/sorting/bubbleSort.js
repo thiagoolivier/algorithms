@@ -9,7 +9,7 @@ function bubbleSort(sourceArr) {
         noSwaps = false;
       }
     }
-    if(noSwaps) break;
+    if (noSwaps) break;
   }
 
   return sourceArr;
